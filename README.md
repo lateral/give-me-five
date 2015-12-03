@@ -10,7 +10,7 @@ You'll need a Lateral API key with documents added to it, see [our documentation
 
 ### Installing
 
-Download the extension [here](#). Visit [chrome://extensions/](chrome://extensions/) and drag the downloaded `give-me-five.crx` file to the window and drop it to install. 
+Download the extension [here](give-me-five.crx?raw=true). Visit chrome://extensions/ and drag the downloaded `give-me-five.crx` file to the window and drop it to install. 
 
 ### Configuration
 
