@@ -48,7 +48,7 @@ to:
 key: 'your_key_goes_here',
 ```
 
-Now you will need to re-compile the .crx and install the extension.
+Now you will need to [re-compile the .crx](#to-create-a-crx) and [install](#installing) the extension.
 
 #### To create a .crx
 
