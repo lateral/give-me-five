@@ -1,0 +1,49 @@
+input[type="submit"],
+button[type="submit"],
+a.button {
+  @include border-radius(6px);
+  @include hover-opacity(.8);
+  -webkit-appearance: none;
+  background-color: $blue;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: em(18px);
+  height: 36px;
+  line-height: 36px;
+  padding: 0 12px;
+
+  &.red {
+    background-color: #fa3b52;
+  }
+
+  &:focus {
+    outline: none;
+    // @include opacity(.8);
+  }
+
+  &.disabled {
+    @include opacity(.6);
+    cursor: default;
+  }
+
+  &.success {
+    background-color: #50e3c2;
+    cursor: default;
+    padding-right: 40px;
+    text-align: left;
+
+    &:hover {
+      @include opacity(1);
+    }
+  }
+}
+
+a.button {
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

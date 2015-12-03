@@ -1,0 +1,10 @@
+{
+  "preset": "google",
+  "disallowSpacesInsideObjectBrackets": null,
+  "requireSpacesInsideObjectBrackets": "allButNested",
+  "validateLineBreaks": "LF",
+  "validateIndentation": 2,
+  "maximumLineLength": 100,
+  "excludeFiles": ["build/**", "node_modules/**"],
+  "esprima": "esprima-fb"
+}

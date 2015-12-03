@@ -1,0 +1,82 @@
+.index.wrapper {
+  text-align: center;
+
+  .actions {
+    padding-top: 22px;
+  }
+
+  .button {
+    font-size: 18px;
+    font-weight: 300;
+    height: 40px;
+    line-height: 40px;
+    width: 160px;
+  }
+
+  .shortcut {
+    color: #989898;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 0 22px;
+    padding-top: 10px;
+
+    span {
+      display: none;
+    }
+
+    .pc & .pc { display: inline; }
+    .mac & .mac { display: inline; }
+  }
+
+  #settings {
+    @include clearfix;
+    border-top: 1px solid #e2e2e2;
+    color: #5b5b5b;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color .2s;
+
+    &:hover {
+      background-color: #f5f5f5;
+      transition: background-color .2s;
+    }
+
+    i {
+      background-image: url('/images/icon-settings.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 12px 12px;
+      bottom: -1px;
+      display: inline-block;
+      height: 12px;
+      margin-right: 5px;
+      position: relative;
+      width: 12px;
+    }
+  }
+
+  #footer {
+    background-color: #f4f3f4;
+    border-top: 1px solid #e2e2e2;
+    display: block;
+    height: 80px;
+    text-align: center;
+    transition: background-color .2s;
+
+    &:hover {
+      background-color: darken(#f4f3f4, 3%);
+      transition: background-color .2s;
+    }
+
+    img {
+      margin-top: 20px;
+      width: 200px;
+    }
+  }
+}

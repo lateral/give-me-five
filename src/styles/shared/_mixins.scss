@@ -1,0 +1,44 @@
+@mixin trbl($top:false, $right:false, $bottom:false, $left:false) {
+  @if $top    {    top: $top;    }
+  @if $right  {  right: $right;  }
+  @if $bottom { bottom: $bottom; }
+  @if $left   {   left: $left;   }
+}
+
+@mixin tl($top:false, $left:false) {
+  @if $top    {  top: $top;  }
+  @if $left   { left: $left; }
+}
+
+@mixin hover-opacity($opacity: .6, $time: 200ms) {
+  transition: opacity $time;
+
+  &:hover {
+    @include opacity($opacity);
+  }
+}
+
+@mixin line-clamp($lines) {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin break($break) {
+  @media (max-width: $break) { @content; }
+}
+
+@mixin image-bg($img, $w, $h) {
+  background-image: image-url($img);
+  background-repeat: no-repeat;
+  background-size: $w $h;
+  width: $w;
+  height: $h;
+  display: block;
+}
+
+@mixin retina {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { @content; }
+}

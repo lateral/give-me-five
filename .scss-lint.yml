@@ -1,0 +1,18 @@
+exclude:
+  - 'node_modules/**'
+  - 'extension/**'
+linters:
+  SelectorDepth:
+    max_depth: 8
+  SingleLinePerSelector:
+    enabled: false
+  ColorVariable:
+    enabled: false
+  IdSelector:
+    enabled: false
+  NestingDepth:
+    enabled: false
+  QualifyingElement:
+    enabled: false
+  VendorPrefix:
+    enabled: false

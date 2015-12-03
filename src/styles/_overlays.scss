@@ -1,0 +1,40 @@
+.overlay {
+  @include trbl(0, 0, 0, 0);
+  background-color: rgba(245, 245, 245, .8);
+  display: none;
+  line-height: 1.5;
+  position: absolute;
+  text-align: center;
+  -webkit-user-select: none;
+  width: 100%;
+
+  .wrapper {
+    padding: 40px;
+
+    p {
+      font-size: 16px;
+    }
+
+    .button {
+      margin-top: 20px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}
+
+#loader {
+  background-image: url('images/loader-background.gif');
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 900;
+}
+
+#error {
+  background-color: rgba(0, 0, 0, .85);
+  color: #fff;
+  z-index: 1200;
+}

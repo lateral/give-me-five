@@ -1,0 +1,24 @@
+.settings.wrapper div.button {
+  @include trbl(false, 0, 0, 0);
+  background-color: #0093fa;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 300;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  transition: background-color .2s;
+
+  &:hover {
+    background-color: #3baefb;
+  }
+
+  &.saved {
+    background-color: #14bc17;
+    cursor: default;
+    &:hover { background-color: #14bc17; }
+  }
+}

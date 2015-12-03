@@ -1,0 +1,39 @@
+@import 'compass/reset';
+@import 'compass/css3';
+@import 'compass/css3/user-interface';
+@import 'compass/utilities';
+
+$blue: #0b9afa;
+
+@import 'shared/mixins';
+@import 'shared/buttons';
+@import 'shared/header';
+@import 'index';
+@import 'settings/*';
+@import 'overlays';
+
+* {
+  @include box-sizing(border-box);
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  min-height: 186px;
+  min-width: 240px;
+
+  .wrapper {
+    height: 186px;
+    margin: 0 auto;
+    -webkit-user-select: none;
+    user-select: none;
+    width: 240px;
+  }
+
+  &.settings {
+    min-height: 225px;
+
+    .wrapper {
+      height: 225px;
+    }
+  }
+}
