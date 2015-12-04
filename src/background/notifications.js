@@ -1,4 +1,5 @@
 var Deferred = require('deferred-js');
+var async = require('async');
 
 var Notifications = {};
 var progressInterval = false;
@@ -143,7 +144,7 @@ Notifications.show = {
    */
   recommendations: function(results) {
     Notifications.clear.all(function() {
-      results.forEach(function(v) {
+      async.eachSeries(results, function(v, done) {
         var date = new Date(Date.parse(v.meta.date));
         var dateString = '';
         if (date && date.getDate()) {
@@ -153,15 +154,22 @@ Notifications.show = {
           var dateString = dd + '/' + mm + '/' + yy;
         }
 
+        var buttons = [];
+        if (results.indexOf(v) == 4) {
+          buttons = [{ title: 'Close all notifications' }];
+        }
+
         chrome.notifications.create(v.id + '-' + Date.now(), {
+          buttons: buttons,
           type: 'basic',
           title: v.meta.title,
           message: '',
           contextMessage: dateString,
           iconUrl: (v.meta && v.meta.image) || 'images/loader-logo.png',
           priority: 2
-        }, function() {});
-        // });
+        }, function() {
+          done();
+        });
       });
     });
   }

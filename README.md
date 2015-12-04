@@ -1,12 +1,12 @@
 # Give me five
 
-Use Lateral to recommend content that is relevant to the page you're currently seeing in Chrome. Example of configuring the extension and getting recommendations:
+This allows you to create notifications that recommend your content that is relevant to the page you're currently seeing in Chrome. Example of configuring the extension and getting recommendations:
 
 ![Example of configuring the extension and getting recommendations](https://i.imgur.com/Y5e6mOg.gif)  
 
 ## Overview
 
-You'll need a Lateral API key with documents added to it, see [our documentation](https://lateral.io/docs/api#adding-documents) for information about how to do that. Once you have that, you can either hard-code your key into the extension and recompile or you can use our precompiled extension that allows you to add a key through the extension itself.
+First you'll need to add content. You'll need an API key which you can then add content to, see [our documentation](https://lateral.io/docs/api#adding-documents) for information about how to do that. Once you have that, you can either hard-code your key into the extension and recompile or you can use our precompiled extension that allows you to add a key through the extension itself.
 
 #### Installing
 

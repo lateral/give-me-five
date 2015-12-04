@@ -71,6 +71,13 @@ chrome.notifications.onClicked.addListener(function(notificationId) {
 });
 
 /*
+ * If close all notifications button is pressed
+ */
+chrome.notifications.onButtonClicked.addListener(function(notificationId) {
+  notifications.clear.all(function() {});
+});
+
+/*
  * Register the context menu on install
  */
 chrome.runtime.onInstalled.addListener(function() {
