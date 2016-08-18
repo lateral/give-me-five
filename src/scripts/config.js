@@ -1,4 +1,4 @@
 module.exports = {
   key: null,
-  apiBase: 'https://api.lateral.io/'
+  apiBase: 'https://api-v4.lateral.io/'
 };
